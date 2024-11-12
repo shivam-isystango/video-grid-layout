@@ -2,7 +2,7 @@
 
 import { FC, useRef } from "react";
 
-const HoverVideo: FC<{ videoId: string; provider: "vimeo" | "youtube" }> = ({ videoId, provider }) => {
+const HoverVideo: FC<{ videoId: string | number; provider: "vimeo" | "youtube" }> = ({ videoId, provider }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const handleMouseEnter = () => {
